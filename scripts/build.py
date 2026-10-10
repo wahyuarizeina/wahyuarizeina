@@ -42,8 +42,8 @@ FULL_NAME = "Wahyu Surya"
 HANDLE = "@wahyuarizeina"
 ROLES = ["Game Developer", "Technical Designer @ RIVRS", "AI & Data Analyst", "Full-Stack Web Developer"]
 TAGLINE = [
-    "Membangun game, mengolah data jadi insight, dan",
-    "merakit produk web yang benar-benar dipakai orang.",
+    "I build games, turn data into insight, and ship",
+    "web products that people actually use.",
 ]
 HERO_CHIPS = [("Game Dev", PINK), ("Data & AI", BLUE), ("Full-Stack Web", MINT)]
 RING_TEXT = "GAME  •  DATA  •  AI  •  WEB  •  DESIGN  •  "
@@ -52,44 +52,44 @@ MARQUEE = ["GAME DEVELOPMENT", "TECHNICAL DESIGN", "DATA ANALYSIS", "MACHINE LEA
            "SUPABASE", "TYPESCRIPT", "PYTHON", "POSTGRESQL", "AUTOMATION"]
 
 SECTIONS = {
-    "about": ("01", "Tentang Aku", YELLOW),
-    "projects": ("02", "Proyek Pilihan", BLUE),
+    "about": ("01", "About Me", YELLOW),
+    "projects": ("02", "Featured Projects", BLUE),
     "toolkit": ("03", "Toolkit", PINK),
-    "activity": ("04", "Jejak Kontribusi", PURPLE),
+    "activity": ("04", "Contributions", PURPLE),
 }
 
 PROJECTS = [
     dict(slug="tofav", title="Tofav Game", label="GAME STORE · 2026", color=MINT, art="game",
          status="LIVE",
-         desc=["Storefront top-up game: order 6 langkah, validasi", "Gamepass Roblox, chat bot Minfav & dasbor admin."],
+         desc=["Game top-up storefront: 6-step checkout, Roblox", "Gamepass validation, chat bot & admin dashboard."],
          tags=["Next.js 16", "Supabase", "Tailwind v4", "iPaymu"]),
     dict(slug="pemilu", title="Pemilu 2024 Analytics", label="DATA & AI · 2024", color=BLUE, art="chart",
          status="OPEN SOURCE",
-         desc=["Analisis elektoral end-to-end: EDA, segmentasi", "K-Means, model prediktif & simulasi kursi DPR."],
+         desc=["End-to-end election analysis: EDA, K-Means", "segmentation, predictive models & seat simulation."],
          tags=["Python", "scikit-learn", "Jupyter", "Next.js"]),
     dict(slug="kitapunya", title="Kita Punya Project", label="SAAS · 2026", color=YELLOW, art="browser",
          status="LIVE",
-         desc=["Layanan manajemen website untuk UMKM: portal", "klien, invoice PDF & pengingat otomatis."],
+         desc=["Website management service for small businesses:", "client portal, PDF invoices & automated reminders."],
          tags=["Next.js", "Supabase", "Resend", "Playwright"]),
-    dict(slug="markalani", title="Markalani Music", label="MUSIK · 2026", color=PINK, art="music",
+    dict(slug="markalani", title="Markalani Music", label="MUSIC · 2026", color=PINK, art="music",
          status="LIVE",
-         desc=["Situs label musik: profil artis, galeri foto", "& video, dikelola lewat panel admin."],
+         desc=["Music label website: artist profiles, photo &", "video galleries, managed from an admin panel."],
          tags=["Next.js 16", "React 19", "Supabase", "Tailwind"]),
 ]
 
 TOOLKIT = [
-    ("Data & AI", "olah · modelkan · ceritakan", BLUE,
+    ("Data & AI", "analyze · model · tell", BLUE,
      ["Python", "pandas", "NumPy", "scikit-learn", "Matplotlib", "Seaborn", "Jupyter", "Google Colab"]),
-    ("Frontend", "cepat · rapi · aksesibel", PINK,
+    ("Frontend", "fast · clean · accessible", PINK,
      ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Radix UI"]),
-    ("Backend", "aman dari database ke atas", MINT,
+    ("Backend", "secure from the database up", MINT,
      ["Supabase", "PostgreSQL", "Row Level Security", "Auth", "Resend", "iPaymu", "Turnstile"]),
-    ("Kualitas & Rilis", "uji dulu, baru kirim", YELLOW,
+    ("Quality & Release", "test first, then ship", YELLOW,
      ["Playwright", "Vitest", "GitHub Actions", "Vercel", "Hostinger", "Git", "Claude Code"]),
 ]
 
-FOOTER_TITLE = "Makasih udah mampir!"
-FOOTER_SUB = ["Punya ide game, data yang perlu diceritakan, atau", "web yang mau dibangun? Ayo ngobrol."]
+FOOTER_TITLE = "Thanks for stopping by!"
+FOOTER_SUB = ["Got a game idea, data with a story to tell, or", "a web product to build? Let's talk."]
 
 # ───────────────────────────── font ─────────────────────────────
 FACES = {"display": "brico800", "sans": "work500", "bold": "work700", "mono": "mono400", "monob": "mono500"}
@@ -228,7 +228,7 @@ ANIM_CSS = """
 # ───────────────────────────── header ─────────────────────────────
 def build_header():
     W, H = 1200, 500
-    s = Svg(W, H, f"Hai, aku {NAME} — {', '.join(ROLES[:2])}", " · ".join(TAGLINE))
+    s = Svg(W, H, f"Hi, I'm {NAME} — {', '.join(ROLES[:2])}", " · ".join(TAGLINE))
     s.css.append(ANIM_CSS)
     s.defs.append(dots_pattern("dots"))
     s.add(f'<rect width="{W}" height="{H}" fill="{CREAM}"/><rect width="{W}" height="{H}" fill="url(#dots)"/>')
@@ -244,9 +244,9 @@ def build_header():
     s.add(s.text(cx0 + cw - 106, cy0 + 32, "online", "mono", 14, MUTED))
 
     x = 84
-    s.add(s.text(x, 150, "HALO, SALAM KENAL —", "monob", 16, MUTED, ls=2.5))
+    s.add(s.text(x, 150, "HELLO, NICE TO MEET YOU —", "monob", 16, MUTED, ls=2.5))
     # headline + highlight
-    pre = "Hai, aku "
+    pre = "Hi, I'm "
     size = 84
     wpre = tw(pre, "display", size, -2)
     wname = tw(NAME, "display", size, -2)
