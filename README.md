@@ -15,32 +15,13 @@
 
 <img src="assets/section-about.svg" height="64" alt="01 — Tentang Aku" />
 
-Halo! Aku **Wahyu Surya** 👋 — **Game Developer** yang saat ini bekerja sebagai **Technical Designer di RIVRS**.
-Di luar game, aku juga mengolah data dan membangun produk web dari nol sampai rilis —
-buatku data, desain, dan kode itu satu paket.
+Halo! Aku **Wahyu Surya** 👋 — **Game Developer** dan saat ini **Technical Designer di RIVRS**.
+Di luar game, aku mengolah data dan membangun produk web dari nol sampai rilis.
 
-- 🎮 &nbsp;**Saat ini** — Technical Designer di **RIVRS**, menjembatani desain game dan implementasi teknis.
-- 📊 &nbsp;**Data & AI** — EDA, segmentasi (K-Means), model prediktif, dan dashboard yang mudah dibaca.
-- 🛠️ &nbsp;**Full-stack web** — UI Next.js, database Supabase dengan RLS, payment gateway, sampai dasbor admin.
-- 🕹️ &nbsp;**Proyek terbaru** — **[Tofav Game](https://tofavgame.com)**, toko top-up game yang sudah live.
-- 🌱 &nbsp;**Sedang mendalami** — model prediktif dan visualisasi data yang jujur.
-- 💬 &nbsp;**Ajak ngobrol soal** — game development, technical design, analisis data, dan Next.js + Supabase.
-- 📫 &nbsp;**Hubungi aku** — [wahyuarizeina@gmail.com](mailto:wahyuarizeina@gmail.com) atau [LinkedIn](https://www.linkedin.com/in/wahyu-surya-124703283/).
-
-```python
-class WahyuSurya:
-    peran   = ["Game Developer", "AI & Data Analyst", "Full-Stack Web Developer"]
-    kerja   = {"posisi": "Technical Designer", "di": "RIVRS"}
-    asal    = "Indonesia 🇮🇩"
-    stack   = {
-        "data": ["Python", "pandas", "scikit-learn", "Jupyter"],
-        "web":  ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-        "rilis": ["Playwright", "GitHub Actions", "Vercel"],
-    }
-
-    def motto(self) -> str:
-        return "Data tanpa cerita cuma angka. Produk tanpa pengguna cuma kode."
-```
+- 🎮 &nbsp;Game development & technical design
+- 📊 &nbsp;Data & AI — analisis, model prediktif, dashboard
+- 🛠️ &nbsp;Full-stack web — Next.js + Supabase
+- 📫 &nbsp;[wahyuarizeina@gmail.com](mailto:wahyuarizeina@gmail.com) · [LinkedIn](https://www.linkedin.com/in/wahyu-surya-124703283/)
 
 <br />
 
