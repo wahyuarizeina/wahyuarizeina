@@ -1,0 +1,38 @@
+name: Ular kontribusi
+
+on:
+  schedule:
+    - cron: "17 0 * * *" # setiap hari, 07:17 WIB
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-light.svg?color_snake=#4c6ef5&color_dots=#f1ede0,#ffe8a3,#ffd43b,#74c0fc,#4c6ef5
+            dist/snake-dark.svg?palette=github-dark&color_snake=#ffd43b&color_dots=#161b22,#1c2f5e,#3b5bdb,#74c0fc,#ffd43b
+
+      - name: Simpan ke assets/
+        run: |
+          cp dist/snake-light.svg dist/snake-dark.svg assets/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/snake-light.svg assets/snake-dark.svg
+          git diff --cached --quiet || (git commit -m "chore: perbarui animasi ular kontribusi" && git push)
