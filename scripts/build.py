@@ -299,20 +299,17 @@ def build_header():
     s.add(f'<g class="spin" style="transform-origin:{rcx}px {rcy}px">'
           f'<text font-family="monob" font-size="17" fill="{INK}" dy="6">'
           f'<textPath href="#ring" textLength="{circ - 4:.1f}" lengthAdjust="spacing">{escape(RING_TEXT)}</textPath></text></g>')
-    # mini chart inside
-    bw, base = 16, rcy + 34
-    bars = [(26, PINK), (40, YELLOW), (34, MINT), (58, COBALT)]
-    bx0 = rcx - (len(bars) * bw + (len(bars) - 1) * 8) / 2
-    pts = []
-    for i, (bh, col) in enumerate(bars):
-        bx = bx0 + i * (bw + 8)
-        s.add(f'<rect x="{bx:.1f}" y="{base - bh}" width="{bw}" height="{bh}" rx="3" fill="{col}" stroke="{INK}" stroke-width="2.5"/>')
-        pts.append((bx + bw / 2, base - bh - 12))
-    s.add(f'<path d="M{pts[0][0]:.1f},{pts[0][1]} ' + " ".join(f"L{px:.1f},{py}" for px, py in pts[1:])
-          + f'" fill="none" stroke="{INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
-    for px, py in pts:
-        s.add(f'<circle cx="{px:.1f}" cy="{py}" r="4.5" fill="{WHITE}" stroke="{INK}" stroke-width="2.5"/>')
-    s.add(f'<path d="M{rcx - 46},{base + 3} H{rcx + 46}" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>')
+    # game controller inside
+    st = f'stroke="{INK}" stroke-width="3" stroke-linejoin="round"'
+    pad = (f'<path d="M-40,-24 H40 A34,34 0 0 1 64,32 L58,38 A16,16 0 0 1 33,35 L25,23 H-25 L-33,35 '
+           f'A16,16 0 0 1 -58,38 L-64,32 A34,34 0 0 1 -40,-24 Z" fill="{PAPER}" {st}/>'
+           f'<rect x="-47" y="-5" width="26" height="10" rx="2.5" fill="{INK}"/>'
+           f'<rect x="-39" y="-13" width="10" height="26" rx="2.5" fill="{INK}"/>'
+           f'<rect x="-11" y="-13" width="9" height="5" rx="2.5" fill="{INK}"/>'
+           f'<rect x="2" y="-13" width="9" height="5" rx="2.5" fill="{INK}"/>')
+    for bx, by, col in [(35, -11, PINK), (46, 0, YELLOW), (35, 11, MINT), (24, 0, COBALT)]:
+        pad += f'<circle cx="{bx}" cy="{by}" r="5.5" fill="{col}" stroke="{INK}" stroke-width="2.3"/>'
+    s.add(f'<g class="float2"><g transform="translate({rcx} {rcy + 4})">{pad}</g></g>')
 
     s.add(sparkle(812, 128, 20, YELLOW, "twinkle"))
     s.add(sparkle(1112, 140, 13, PURPLE, "twinkle2"))

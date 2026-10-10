@@ -12,7 +12,8 @@ yang diperbarui otomatis setiap hari oleh workflow `.github/workflows/snake.yml`
    ```
 
 3. Teks di luar gambar (Tentang Aku, link proyek, badge) ada di `README.md`.
-4. Commit & push ke `main` — profil di github.com/wahyuarizeina langsung ikut berubah.
+4. Naikkan angka `?v=` di `README.md` (mis. `?v=4` → `?v=5`) supaya GitHub tidak memakai
+   gambar lama dari cache, lalu commit & push ke `main`.
 
 Generator akan berhenti dengan pesan error kalau ada teks yang terlalu panjang
 untuk kartunya, jadi tinggal pendekkan teksnya lalu jalankan ulang.
