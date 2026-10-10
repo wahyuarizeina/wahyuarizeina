@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Hai, aku Wahyu — AI & Data Analyst dan Full-Stack Web Developer" />
+  <img src="assets/header.svg" width="100%" alt="Hai, aku Wahyu — Game Developer, Technical Designer di RIVRS, AI & Data Analyst, Full-Stack Web Developer" />
 </p>
 
 <p align="center">
@@ -9,25 +9,28 @@
   <img src="https://komarev.com/ghpvc/?username=wahyuarizeina&label=PROFILE%20VIEWS&color=ff8fab&style=for-the-badge" alt="Profile views" />
 </p>
 
-<img src="assets/marquee.svg" width="100%" alt="Data Analysis · Machine Learning · Next.js · Supabase · TypeScript · Python · Dashboard · PostgreSQL · UI/UX · Automation" />
+<img src="assets/marquee.svg" width="100%" alt="Game Development · Technical Design · Data Analysis · Machine Learning · Next.js · Supabase · TypeScript · Python · PostgreSQL · Automation" />
 
 <br />
 
 <img src="assets/section-about.svg" height="64" alt="01 — Tentang Aku" />
 
-Halo! Aku **Wahyu Surya** 👋 — analis data yang juga suka membangun produk web dari nol sampai rilis.
-Buatku, data dan kode itu satu paket: data memberi tahu *apa* yang perlu dibangun, kode yang mewujudkannya.
+Halo! Aku **Wahyu Surya** 👋 — **Game Developer** yang saat ini bekerja sebagai **Technical Designer di RIVRS**.
+Di luar game, aku juga mengolah data dan membangun produk web dari nol sampai rilis —
+buatku data, desain, dan kode itu satu paket.
 
+- 🎮 &nbsp;**Saat ini** — Technical Designer di **RIVRS**, menjembatani desain game dan implementasi teknis.
 - 📊 &nbsp;**Data & AI** — EDA, segmentasi (K-Means), model prediktif, dan dashboard yang mudah dibaca.
 - 🛠️ &nbsp;**Full-stack web** — UI Next.js, database Supabase dengan RLS, payment gateway, sampai dasbor admin.
-- 🔭 &nbsp;**Sedang mengerjakan** — storefront top-up game **Tofav Game**.
+- 🕹️ &nbsp;**Proyek terbaru** — **[Tofav Game](https://tofavgame.com)**, toko top-up game yang sudah live.
 - 🌱 &nbsp;**Sedang mendalami** — model prediktif dan visualisasi data yang jujur.
-- 💬 &nbsp;**Ajak ngobrol soal** — analisis data pemilu, Next.js + Supabase, dashboard, dan automasi.
+- 💬 &nbsp;**Ajak ngobrol soal** — game development, technical design, analisis data, dan Next.js + Supabase.
 - 📫 &nbsp;**Hubungi aku** — [wahyuarizeina@gmail.com](mailto:wahyuarizeina@gmail.com) atau [LinkedIn](https://www.linkedin.com/in/wahyu-surya-124703283/).
 
 ```python
 class WahyuSurya:
-    peran   = ["AI & Data Analyst", "Full-Stack Web Developer"]
+    peran   = ["Game Developer", "AI & Data Analyst", "Full-Stack Web Developer"]
+    kerja   = {"posisi": "Technical Designer", "di": "RIVRS"}
     asal    = "Indonesia 🇮🇩"
     stack   = {
         "data": ["Python", "pandas", "scikit-learn", "Jupyter"],
@@ -44,45 +47,17 @@ class WahyuSurya:
 <img src="assets/section-projects.svg" height="64" alt="02 — Proyek Pilihan" />
 
 <p align="center">
+  <a href="https://tofavgame.com"><img src="assets/project-tofav.svg" width="49%" alt="Tofav Game — storefront top-up game dengan validasi Gamepass Roblox, chat bot dan dasbor admin" /></a>
   <a href="https://github.com/wahyuarizeina/Analisis-Data-Elektoral-Pemilu-2024-Indonesia"><img src="assets/project-pemilu.svg" width="49%" alt="Pemilu 2024 Analytics — analisis elektoral end-to-end dengan EDA, K-Means, model prediktif dan simulasi kursi DPR" /></a>
-  <img src="assets/project-tofav.svg" width="49%" alt="Tofav Game — storefront top-up game dengan validasi Gamepass Roblox, chat bot dan dasbor admin" />
 </p>
 <p align="center">
   <a href="https://kita-punya-project.vercel.app"><img src="assets/project-kitapunya.svg" width="49%" alt="Kita Punya Project — layanan manajemen website untuk UMKM" /></a>
-  <a href="https://raksalab.vercel.app"><img src="assets/project-banuara.svg" width="49%" alt="Banuara — situs resmi game petualangan berbasis cerita dengan CMS" /></a>
-</p>
-<p align="center">
   <a href="https://markalani-music.vercel.app"><img src="assets/project-markalani.svg" width="49%" alt="Markalani Music — situs label musik dengan panel admin" /></a>
-  <img src="assets/project-portfolio.svg" width="49%" alt="Portofolio Neobrutalism — situs portofolio untuk product designer dan kreator" />
-</p>
-
-<details>
-<summary><b>🔍 Sorotan dari analisis Pemilu 2024</b></summary>
-<br />
-
-| Temuan | Angka |
-| --- | --- |
-| Segmentasi provinsi (K-Means) | **4 cluster** — Urban Progressive, Rural Traditional, Swing Moderate, Emerging Region |
-| Model prediksi partisipasi (Gradient Boosting) | **R² 0,585** — penetrasi internet jadi fitur #1 |
-| Simulasi kursi DPR (Sainte-Laguë) | PDIP 99 · Golkar 91 · Gerindra 79 · PKB 63 |
-| Partai lolos ambang 4% | **9 partai** |
-
-[![Open in Colab](https://img.shields.io/badge/Buka%20di-Google%20Colab-ffd43b?style=for-the-badge&logo=googlecolab&logoColor=0e0e10&labelColor=fff3c4)](https://colab.research.google.com/github/wahyuarizeina/Analisis-Data-Elektoral-Pemilu-2024-Indonesia/blob/main/Analisis_Elektoral_Pemilu_2024_Colab.ipynb)
-[![Live dashboard](https://img.shields.io/badge/Lihat-Dashboard%20Live-74c0fc?style=for-the-badge&logo=vercel&logoColor=0e0e10&labelColor=fff3c4)](https://elektoralpemilu2024.vercel.app)
-
-</details>
-
-<br />
-
-<img src="assets/section-process.svg" height="64" alt="03 — Cara Aku Kerja" />
-
-<p align="center">
-  <img src="assets/process.svg" width="100%" alt="Pahami → Gali Data → Rancang → Bangun → Ukur" />
 </p>
 
 <br />
 
-<img src="assets/section-toolkit.svg" height="64" alt="04 — Toolkit" />
+<img src="assets/section-toolkit.svg" height="64" alt="03 — Toolkit" />
 
 <p align="center">
   <img src="assets/toolkit.svg" width="100%" alt="Data & AI: Python, pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter, Google Colab. Frontend: Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Radix UI. Backend: Supabase, PostgreSQL, Row Level Security, Auth, Resend, iPaymu, Turnstile. Kualitas & Rilis: Playwright, Vitest, GitHub Actions, Vercel, Hostinger, Git, Claude Code." />
@@ -90,7 +65,7 @@ class WahyuSurya:
 
 <br />
 
-<img src="assets/section-activity.svg" height="64" alt="05 — Jejak Kontribusi" />
+<img src="assets/section-activity.svg" height="64" alt="04 — Jejak Kontribusi" />
 
 <p align="center">
   <picture>
@@ -103,5 +78,5 @@ class WahyuSurya:
 <br />
 
 <p align="center">
-  <a href="mailto:wahyuarizeina@gmail.com"><img src="assets/footer.svg" width="100%" alt="Makasih udah mampir! Punya data yang perlu diceritakan, atau ide web yang mau dibangun? Ayo ngobrol." /></a>
+  <a href="mailto:wahyuarizeina@gmail.com"><img src="assets/footer.svg" width="100%" alt="Makasih udah mampir! Punya ide game, data yang perlu diceritakan, atau web yang mau dibangun? Ayo ngobrol." /></a>
 </p>

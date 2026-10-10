@@ -40,58 +40,41 @@ WHITE = "#ffffff"
 NAME = "Wahyu"
 FULL_NAME = "Wahyu Surya"
 HANDLE = "@wahyuarizeina"
-ROLES = ["AI & Data Analyst", "Full-Stack Web Developer", "Next.js + Supabase Builder", "Pemburu insight dari data"]
+ROLES = ["Game Developer", "Technical Designer @ RIVRS", "AI & Data Analyst", "Full-Stack Web Developer"]
 TAGLINE = [
-    "Mengubah data jadi insight, dan ide jadi produk web",
-    "yang benar-benar dipakai orang.",
+    "Membangun game, mengolah data jadi insight, dan",
+    "merakit produk web yang benar-benar dipakai orang.",
 ]
-HERO_CHIPS = [("Data Analysis", BLUE), ("Machine Learning", PURPLE), ("Full-Stack Web", MINT)]
-RING_TEXT = "DATA  •  AI  •  WEB  •  PRODUK  •  INSIGHT  •  "
+HERO_CHIPS = [("Game Dev", PINK), ("Data & AI", BLUE), ("Full-Stack Web", MINT)]
+RING_TEXT = "GAME  •  DATA  •  AI  •  WEB  •  DESIGN  •  "
 
-MARQUEE = ["DATA ANALYSIS", "MACHINE LEARNING", "NEXT.JS", "SUPABASE", "TYPESCRIPT", "PYTHON",
-           "DASHBOARD", "POSTGRESQL", "UI/UX", "AUTOMATION"]
+MARQUEE = ["GAME DEVELOPMENT", "TECHNICAL DESIGN", "DATA ANALYSIS", "MACHINE LEARNING", "NEXT.JS",
+           "SUPABASE", "TYPESCRIPT", "PYTHON", "POSTGRESQL", "AUTOMATION"]
 
 SECTIONS = {
     "about": ("01", "Tentang Aku", YELLOW),
     "projects": ("02", "Proyek Pilihan", BLUE),
-    "process": ("03", "Cara Aku Kerja", MINT),
-    "toolkit": ("04", "Toolkit", PINK),
-    "activity": ("05", "Jejak Kontribusi", PURPLE),
+    "toolkit": ("03", "Toolkit", PINK),
+    "activity": ("04", "Jejak Kontribusi", PURPLE),
 }
 
 PROJECTS = [
+    dict(slug="tofav", title="Tofav Game", label="GAME STORE · 2026", color=MINT, art="game",
+         status="LIVE",
+         desc=["Storefront top-up game: order 6 langkah, validasi", "Gamepass Roblox, chat bot Minfav & dasbor admin."],
+         tags=["Next.js 16", "Supabase", "Tailwind v4", "iPaymu"]),
     dict(slug="pemilu", title="Pemilu 2024 Analytics", label="DATA & AI · 2024", color=BLUE, art="chart",
          status="OPEN SOURCE",
          desc=["Analisis elektoral end-to-end: EDA, segmentasi", "K-Means, model prediktif & simulasi kursi DPR."],
          tags=["Python", "scikit-learn", "Jupyter", "Next.js"]),
-    dict(slug="tofav", title="Tofav Game", label="E-COMMERCE · 2026", color=MINT, art="game",
-         status="DIKERJAKAN",
-         desc=["Storefront top-up game: order 6 langkah, validasi", "Gamepass Roblox, chat bot Minfav & dasbor admin."],
-         tags=["Next.js 16", "Supabase", "Tailwind v4", "iPaymu"]),
     dict(slug="kitapunya", title="Kita Punya Project", label="SAAS · 2026", color=YELLOW, art="browser",
          status="LIVE",
          desc=["Layanan manajemen website untuk UMKM: portal", "klien, invoice PDF & pengingat otomatis."],
          tags=["Next.js", "Supabase", "Resend", "Playwright"]),
-    dict(slug="banuara", title="Banuara", label="GAME WEB · 2026", color=PURPLE, art="mountain",
-         status="LIVE",
-         desc=["Situs resmi game petualangan berbasis cerita,", "lengkap dengan CMS untuk konten & media."],
-         tags=["Next.js 16", "Supabase", "Tailwind 4", "Playwright"]),
     dict(slug="markalani", title="Markalani Music", label="MUSIK · 2026", color=PINK, art="music",
          status="LIVE",
          desc=["Situs label musik: profil artis, galeri foto", "& video, dikelola lewat panel admin."],
          tags=["Next.js 16", "React 19", "Supabase", "Tailwind"]),
-    dict(slug="portfolio", title="Portofolio Neobrutalism", label="PORTFOLIO · 2026", color=ORANGE, art="flower",
-         status="PRIVATE",
-         desc=["Situs portofolio untuk product designer &", "kreator: studi kasus, layanan & form kontak."],
-         tags=["Next.js", "Tailwind", "Supabase"]),
-]
-
-PROCESS = [
-    ("Pahami", ["Masalah, pengguna", "& tujuan bisnis"], YELLOW),
-    ("Gali Data", ["Kumpulkan data,", "rapikan & eksplor"], BLUE),
-    ("Rancang", ["Alur, UI &", "skema database"], PINK),
-    ("Bangun", ["Next.js, Supabase", "& automasi"], MINT),
-    ("Ukur", ["Uji, pantau metrik", "& iterasi"], PURPLE),
 ]
 
 TOOLKIT = [
@@ -106,7 +89,7 @@ TOOLKIT = [
 ]
 
 FOOTER_TITLE = "Makasih udah mampir!"
-FOOTER_SUB = ["Punya data yang perlu diceritakan, atau ide web", "yang mau dibangun? Ayo ngobrol."]
+FOOTER_SUB = ["Punya ide game, data yang perlu diceritakan, atau", "web yang mau dibangun? Ayo ngobrol."]
 
 # ───────────────────────────── font ─────────────────────────────
 FACES = {"display": "brico800", "sans": "work500", "bold": "work700", "mono": "mono400", "monob": "mono500"}
@@ -494,39 +477,6 @@ def build_projects():
         s.render(OUT / f"project-{p['slug']}.svg")
 
 
-# ───────────────────────────── process ─────────────────────────────
-def build_process():
-    W, H = 1200, 250
-    s = Svg(W, H, "Cara aku kerja: " + " → ".join(p[0] for p in PROCESS))
-    s.css.append(ANIM_CSS + ".flow{stroke-dasharray:8 8;animation:flow 1s linear infinite}"
-                 "@keyframes flow{to{stroke-dashoffset:-16}}")
-    n = len(PROCESS)
-    bw, gap = 196, 42
-    x0 = (W - (n * bw + (n - 1) * gap)) / 2 - 3
-    for i, (title, lines, col) in enumerate(PROCESS):
-        x = x0 + i * (bw + gap)
-        y = 40 + (14 if i % 2 else 0)
-        s.add(f'<g class="{"float" if i % 2 == 0 else "float2"}">')
-        s.add(box(x, y, bw, 170, PAPER, r=16, shadow=6))
-        s.add(f'<path d="M{x},{y + 58} H{x + bw}" stroke="{INK}" stroke-width="3"/>')
-        s.add(f'<path d="M{x + 1.5},{y + 58} V{y + 16} a14.5,14.5 0 0 1 14.5,-14.5 H{x + bw - 16} a14.5,14.5 0 0 1 14.5,14.5 V{y + 58}Z" fill="{col}"/>')
-        s.add(f'<path d="M{x},{y + 58} H{x + bw}" stroke="{INK}" stroke-width="3"/>')
-        s.add(f'<circle cx="{x + 30}" cy="{y + 29}" r="17" fill="{INK}"/>')
-        s.add(s.text(x + 30, y + 35, f"{i + 1:02d}", "monob", 14, WHITE, anchor="middle"))
-        s.add(s.text(x + 56, y + 38, title, "display", 25, INK, ls=-0.4))
-        for j, line in enumerate(lines):
-            assert tw(line, "sans", 17) < bw - 30, f"teks proses terlalu panjang: {line!r}"
-            s.add(s.text(x + 18, y + 98 + j * 26, line, "sans", 17, MUTED))
-        s.add("</g>")
-        if i < n - 1:
-            ax = x + bw + 9
-            ay = 125 + 7
-            s.add(f'<path d="M{ax},{ay} H{ax + gap - 16}" stroke="{INK}" stroke-width="3" class="flow"/>')
-            s.add(f'<path d="M{ax + gap - 22},{ay - 7} L{ax + gap - 14},{ay} L{ax + gap - 22},{ay + 7}" fill="none" '
-                  f'stroke="{INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
-    s.render(OUT / "process.svg")
-
-
 # ───────────────────────────── toolkit ─────────────────────────────
 def build_toolkit():
     W = 1200
@@ -621,7 +571,6 @@ if __name__ == "__main__":
     build_marquee()
     build_sections()
     build_projects()
-    build_process()
     build_toolkit()
     build_footer()
     build_snake_placeholder()
